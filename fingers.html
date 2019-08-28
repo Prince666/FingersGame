@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <title>WELCOME TO MY GAME</title>
+<style>
+.field {
+    width: 500px;
+    margin-top:100px;
+}
+
+</style>
+</head>
+<body>
+ <center>
+
+ <fieldset class="field">
+
+      <h2>How many Finger I am Holding Up </h2>
+
+        
+
+      <p class="solid"><input type="text" placeholder="Type..." id="text"> <br>
+
+     <br> <button id="butt">Guess</button>
+
+      </p>
+
+    </fieldset>
+
+    </center>
+
+​  <script type="text/javascript">
+    document.getElementById("butt").onclick = function() {
+    
+    var randomNumber = Math.random();
+
+    randomNumber = randomNumber * 6;
+
+    randomNumber = Math.floor(randomNumber);
+
+    if(document.getElementById("text").value == randomNumber) 
+    {
+        alert("Well Done!!, You Got It");
+
+    }
+    else
+    {
+        alert("Better Luck next time" + randomNumber);
+    }
+    };
+    </script>
+    
+
+​
+
+</body>
+
+</html>
+
+​
+
