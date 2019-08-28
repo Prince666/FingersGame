@@ -2,6 +2,7 @@
 
 <head>
     <title>WELCOME TO MY GAME</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <style>
 .field {
     width: 500px;
@@ -40,12 +41,14 @@
 
     if(document.getElementById("text").value == randomNumber) 
     {
-        alert("Well Done!!, You Got It");
+        swal("Good job!", "Your Guess was right!", "success");
 
     }
     else
     {
-        alert("Better Luck next time" + randomNumber);
+        swal("Sorry!", "Better Luck next time!", "error");
+
+
     }
     };
     </script>
