@@ -1,0 +1,96 @@
+<html>
+
+<head>
+    <title>WELCOME TO MY GAME</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<style>
+.field {
+    width: 500px;
+    margin-top:100px;
+}
+
+.space {
+    width:100px;
+}
+</style>
+</head>
+<body>
+ <center>
+
+ <fieldset class="field">
+
+      <h2>How many Fingers are you Holding Up</h2>
+
+        
+
+      <p>
+        <select id="myNumber" class="space">
+            
+            <option>0</option>
+            
+            <option>1</option>
+            
+            <option>2</option>
+            
+            <option>3</option>
+            
+            <option>4</option>
+            
+            <option>5</option>
+        
+        </select>
+        <br>
+     <br> <button id="guess">Guess</button>
+
+      </p>
+
+    </fieldset>
+
+    </center>
+
+​  <script type="text/javascript">
+    document.getElementById("guess").onclick = function() {
+    
+    var myNumber = document.getElementById("myNumber").value;
+
+    var gotIt = false;
+
+    var numberOfGuesses = 1;
+
+    
+    while (gotIt == false) 
+    {
+    var guess = Math.random();
+
+    guess = guess * 6;
+
+    guess = Math.floor(guess);
+
+    
+
+    if(guess == myNumber) 
+    {
+        gotIt = true;
+        swal ("Got it! It was a " + guess + ". It took me " + numberOfGuesses + " guesses.");
+
+    }
+    else
+    {
+        numberOfGuesses++;
+        
+
+
+    }
+    }
+    }
+    </script>
+    
+
+​
+
+</body>
+
+</html>
+
+​
+
